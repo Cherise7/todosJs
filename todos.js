@@ -130,20 +130,7 @@ function arrjudge(flag,ele) {
 }
 
 
-// active 状态
-active.onfocus = function () {
-    list.innerHTML = '';
-    btnNoAct()
-    this.classList.add('active')
-    for (var i = 0; i < arr.length; i++) {
-        if (!arr[i].ischoose) {
-            list.innerHTML += arr[i].content;
-            chooseone = document.querySelectorAll('.chooseone');
-            chooseone[i].style.height = list.children[i].offsetHeight - 20 + "px";
-        }
-    }
-}
-// active 状态
+// all 状态
 all.onfocus = function () {
     btnNoAct()
     this.classList.add('active')
@@ -164,7 +151,7 @@ active.onfocus = function () {
         }
     }
 }
-// active 状态
+// completed 状态
 completed.onfocus = function () {
     list.innerHTML = '';
     btnNoAct()
@@ -193,7 +180,12 @@ clearall.onclick = function () {
         if (arr[i].ischoose){
             arr.splice(i, 1)
             i--
-            conshow()
+            for (var j = 0; j < btn.children.length; j++) {
+                if (btn.children[j].classList.contains('active')){
+                    console.log(btn.children[j]);
+                    btn.children[j].onfocus()
+                }
+            }
         }
     }
 }
