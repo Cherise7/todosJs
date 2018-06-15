@@ -1,0 +1,28 @@
+{
+  "name": "js-sup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Cherise7/todosJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cherise7/todosJs/issues"
+  },
+  "homepage": "https://github.com/Cherise7/todosJs#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-sass": "^4.0.1"
+  }
+}
